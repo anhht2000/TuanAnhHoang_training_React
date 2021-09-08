@@ -9,43 +9,46 @@ export default function RightContent() {
     style: "currency",
     currency: "USD",
   });
-  return (
-    <div className='app__main__right'>
-      <ul className='product__list'>
-        {allProduct?.map((product) => {
-          return (
-            <li className='product__list__item' key={product.id}>
-              <div
-                className='product__list__item-img'
-                style={{
-                  background: `url('${
-                    process.env.PUBLIC_URL + "./images/product/" + product.image
-                  }') center center/cover no-repeat`,
-                }}
-              ></div>
-              <div className='product__list__item-info'>
-                <p className='product__list__item-info-name'>{product.name}</p>
-                <div className='product__list__item-info-price'>
-                  <p className='product__list__item-info-price-new'>
-                    {formatter.format(product.newPrice)}
-                  </p>
-                  <p className='product__list__item-info-price-old'>
-                    {formatter.format(product.oldPrice)}
-                  </p>
-                </div>
-                <span
-                  className='product__list__item-info-button'
-                  onClick={() => {
-                    history.push("/detail-product/" + product.id);
+  if (allProduct.length > 0) {
+    return (
+      <div className='app__main__right'>
+        <ul className='product__list'>
+          {allProduct?.map((product) => {
+            return (
+              <li className='product__list__item' key={product.id}>
+                <div
+                  className='product__list__item-img'
+                  style={{
+                    background: `url('${
+                      process.env.PUBLIC_URL + "./images/product/" + product.image
+                    }') center center/cover no-repeat`,
                   }}
-                >
-                  Chọn Mua
-                </span>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
+                ></div>
+                <div className='product__list__item-info'>
+                  <p className='product__list__item-info-name'>{product.name}</p>
+                  <div className='product__list__item-info-price'>
+                    <p className='product__list__item-info-price-new'>
+                      {formatter.format(product.newPrice)}
+                    </p>
+                    <p className='product__list__item-info-price-old'>
+                      {formatter.format(product.oldPrice)}
+                    </p>
+                  </div>
+                  <span
+                    className='product__list__item-info-button'
+                    onClick={() => {
+                      history.push("/detail-product/" + product.id);
+                    }}
+                  >
+                    Chọn Mua
+                  </span>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
+  return <h2 style={{ color: "red" }}>None Data</h2>;
 }

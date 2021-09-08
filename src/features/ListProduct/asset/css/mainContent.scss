@@ -27,6 +27,7 @@
       padding: 8px 10px;
       border-radius: 3px;
       display: inline-block;
+      cursor: pointer;
       @include Responsive(SM) {
         height: 20px;
       }

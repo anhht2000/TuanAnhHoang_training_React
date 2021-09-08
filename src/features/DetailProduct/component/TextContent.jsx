@@ -7,7 +7,7 @@ export default function TextContent() {
     <>
       <div className='app__main-content'>
         <h2 className='app__main-content-title'>Chi tiết sản phẩm</h2>
-        <div id='text' className={isshow && "d-show"}>
+        <div id='text' className={isshow ? "d-show" : null}>
           <p className='app__main-content-text'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis est ipsam modi. Quasi
             non in a aperiam soluta similique vel harum, inventore nulla corporis ut officia
@@ -42,18 +42,17 @@ export default function TextContent() {
         </div>
         <div>
           <span
-            className={!isshow ? "app__main-content-button  d-none" : "app__main-content-button"}
+            className={isshow ? "app__main-content-button" : "app__main-content-button d-none"}
             onClick={() => setIsshow(false)}
           >
             Thu gọn
           </span>
           <span
-            className={isshow ? "app__main-content-button  d-none" : "app__main-content-button"}
+            className={isshow ? "app__main-content-button d-none" : "app__main-content-button"}
             onClick={() => setIsshow(true)}
           >
             Xem them
           </span>
-          '
         </div>
       </div>
     </>

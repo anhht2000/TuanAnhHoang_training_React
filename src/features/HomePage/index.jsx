@@ -23,7 +23,7 @@ export default function Homepage() {
       {/* new product  */}
       <Product title={"Sản Phẩm Mới"} data={newProduct} />
       {/* banner */}
-      <div class='banner'></div>
+      <div className='banner'></div>
       {/* popular product  */}
       <Product title={"Phổ Biến"} data={popularProduct} />
       {/* footer  */}
