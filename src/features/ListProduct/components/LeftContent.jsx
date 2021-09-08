@@ -9,7 +9,7 @@ export default function LeftContent() {
       handleSetProduct();
     };
   }, []);
-  const handleOnchange = useCallback((e) => {
+  const handleOnchange = (e) => {
     setFilter((prevState) => {
       return { ...filter, [e.target.name]: e.target.value };
     });
@@ -18,8 +18,8 @@ export default function LeftContent() {
       handleFilter(prevState);
       return prevState;
     });
-  }, []);
-  const handleClear = useCallback(() => {
+  };
+  const handleClear = () => {
     setFilter((prevState) => {
       return {};
     });
@@ -28,7 +28,7 @@ export default function LeftContent() {
       handleFilter(prevState);
       return prevState;
     });
-  }, []);
+  };
   return (
     <div className='app__main__left'>
       <ul className='app__main__left-list'>
