@@ -1,0 +1,138 @@
+@import "./variable";
+@import "./mixin.scss";
+.app__header {
+  display: flex;
+  align-items: center;
+  @include Responsive(SM) {
+    height: 50px;
+  }
+  &-left {
+    width: 55%;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &__item {
+      margin-right: 27px;
+      &-link {
+        text-decoration: none;
+        color: $text-color;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      &-link.active {
+        color: $primary-color;
+      }
+    }
+
+    &__item:hover a {
+      color: $primary-color;
+    }
+    @include Responsive(SM) {
+      display: none;
+    }
+  }
+  &-subleft {
+    display: none;
+    width: 55%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    i {
+      cursor: pointer;
+      padding-left: 21px;
+      font-size: 19px;
+      color: #666;
+    }
+    .app__header-subleftList {
+      display: none;
+      list-style: none;
+    }
+    @include Responsive(SM) {
+      display: block;
+      i {
+        position: relative;
+      }
+      .app__header-subleftList.d-none {
+        display: none;
+      }
+      .app__header-subleftList {
+        display: block;
+        position: absolute;
+        top: 6%;
+        left: 21px;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        box-shadow: 0px 7px 17px 0px black;
+        border-radius: 5px;
+        width: 90%;
+        text-align: center;
+        z-index: 1;
+        &__item {
+          font-size: 20px;
+          padding: 13px 0;
+          &:hover {
+            background-color: $primary-color;
+            &-link {
+              color: white;
+            }
+          }
+          &-link {
+            color: black;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  &-center {
+    width: 35%;
+    &-img {
+      cursor: pointer;
+      height: 25px;
+    }
+  }
+  &-subright {
+    display: none;
+    width: 100%;
+    list-style: none;
+    justify-content: flex-end;
+    @include Responsive(SM) {
+      display: flex;
+      padding-right: 20px;
+    }
+  }
+  &-right {
+    width: 20%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    z-index: 1;
+    @include Responsive(SM) {
+      display: none;
+    }
+    &-item {
+      padding-left: 20px;
+      &-icon {
+        cursor: pointer;
+        font-size: 22px;
+        color: $text-color;
+        position: relative;
+        span {
+          font-size: 17px;
+          padding: 1px 7px;
+          background-color: #ef683c;
+          border-radius: 50%;
+          position: absolute;
+          top: -5px;
+          right: -14px;
+          color: #f9f9f9;
+        }
+      }
+      &:hover i {
+        color: $primary-color;
+      }
+    }
+  }
+}

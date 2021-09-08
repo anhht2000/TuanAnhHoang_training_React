@@ -1,0 +1,145 @@
+@import "./variable";
+@import "./mixin.scss";
+
+.app__main__select-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 70px;
+  padding-top: 40px;
+  @include Responsive(SM) {
+    padding: 0 20px;
+  }
+  &-left {
+    width: 15%;
+    @include Responsive(SM) {
+      width: 25%;
+    }
+    // border: 1px solid green;
+    &-img {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+  &-center {
+    width: 40%;
+    @include Responsive(SM) {
+      width: 70%;
+    }
+    // border: 1px solid yellow;
+    display: flex;
+    justify-content: flex-end;
+    &-img {
+      width: 90%;
+    }
+  }
+  &-right {
+    width: 43%;
+    @include Responsive(SM) {
+      width: 100%;
+    }
+    // border: 1px solid red;
+    &__content {
+      padding-left: 50px;
+      @include Responsive(SM) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+      }
+      &-title {
+        margin: 15px 0 0 0;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      &-price {
+        padding: 6px 0;
+        font-size: 20px;
+        font-weight: 700;
+        color: $primary-color;
+      }
+      &-select {
+        &-title {
+          margin: 0;
+          display: inline-block;
+        }
+        &-color {
+          display: flex;
+          padding: 7px 0;
+          p {
+            margin: 0;
+            width: 50px;
+            padding-top: 50px;
+            border-radius: 50%;
+            border: 2px solid $primary-color;
+            margin-right: 10px;
+            cursor: pointer;
+          }
+          &-white {
+            background-color: white;
+          }
+          &-red {
+            background-color: red;
+          }
+          &-yellow {
+            background-color: #fbb96b;
+          }
+        }
+        &-size {
+          display: flex;
+          padding: 7px 0;
+          p {
+            margin: 0;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            border: 2px solid $primary-color;
+            margin-right: 10px;
+            cursor: pointer;
+            font-weight: 700;
+          }
+        }
+        &-amount {
+          display: flex;
+          padding: 10px 0;
+          p {
+            margin: 0;
+            border: 1px solid #999;
+          }
+          &-sub {
+            padding: 0 10px;
+            cursor: pointer;
+          }
+          &-number {
+            padding: 0 35px;
+            font-weight: 600;
+          }
+          &-add {
+            padding: 0 10px;
+            cursor: pointer;
+          }
+        }
+      }
+      &-action {
+        margin-top: 10px;
+        display: flex;
+        text-transform: uppercase;
+        font-size: 14px;
+        &-button {
+          text-decoration: none;
+          background: $primary-color;
+          margin-right: 10px;
+          padding: 8px;
+          border-radius: 2px;
+          color: white;
+          font-weight: 600;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "./variable";
+@import "./mixin.scss";
+//service
+.service {
+  padding-top: 40px;
+  padding-bottom: 75px;
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 10px;
+
+    &-item {
+      width: 24%;
+      display: flex;
+      align-items: center;
+
+      @include Responsive(SM) {
+        width: 49%;
+        margin-top: 20px;
+        justify-content: center;
+      }
+      @include Responsive(XS) {
+        width: 99%;
+        margin-top: 20px;
+        justify-content: center;
+      }
+      &-icon {
+        color: $primary-color;
+        font-size: 28px;
+      }
+      &-info {
+        padding-left: 23px;
+        &__title {
+          margin: 0;
+          font-weight: 500;
+          font-size: 16px;
+        }
+        &__subtitle {
+          margin: 0;
+          font-size: 13px;
+          padding-top: 10px;
+          color: #666;
+        }
+      }
+    }
+  }
+}

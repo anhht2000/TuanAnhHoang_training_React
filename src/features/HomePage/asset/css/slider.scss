@@ -1,0 +1,75 @@
+@import "./variable";
+@import "./mixin.scss";
+.slider {
+  margin-bottom: 105px;
+  display: flex;
+  @include Responsive(SM) {
+    display: none;
+  }
+  &__left {
+    padding-top: 50px;
+    width: 65%;
+    &-title {
+      font-size: 37px;
+      letter-spacing: 1px;
+      margin: 0;
+      color: $primary-color;
+    }
+    &-text {
+      margin: 0;
+      padding: 50px 61px 0 0;
+      font-size: 15px;
+      line-height: 23px;
+      color: #999;
+      font-weight: 400;
+    }
+    &-detail {
+      padding-top: 50px;
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 9px 12px;
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+    &-pagination {
+      padding-top: 55px;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 92px;
+      font-size: 14px;
+      &-prev {
+        cursor: pointer;
+      }
+      &-center {
+        padding: 0 9px;
+      }
+      &-next {
+        cursor: pointer;
+      }
+    }
+  }
+  &__right {
+    width: 35%;
+    position: relative;
+    &-eslip {
+      content: "";
+      position: absolute;
+      top: 32px;
+      right: 3%;
+      width: 350px;
+      height: 300px;
+      background: #42659d;
+      border-radius: 199px 273px 224px 298px;
+    }
+    img {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      height: 500px;
+    }
+  }
+}

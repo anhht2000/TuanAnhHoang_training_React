@@ -1,0 +1,145 @@
+{
+  "topProduct": [
+    {
+      "id": 1,
+      "name": "Quần jean 12",
+      "oldPrice": 194,
+      "newPrice": 120,
+      "image": "product-12.jpg",
+      "numberSell": 20,
+      "dateInput": "2020-11-20",
+      "view": 20
+    },
+    {
+      "id": 2,
+      "name": "Áo thun Dinosaur 1",
+      "oldPrice": 194,
+      "newPrice": 100,
+      "image": "product-01 (1).jpg",
+      "numberSell": 60,
+      "dateInput": "2021-11-20",
+      "view": 100
+    },
+    {
+      "id": 3,
+
+      "name": "Áo thun Dinosaur 2",
+      "oldPrice": 194,
+      "newPrice": 160,
+      "image": "product-02 (1).jpg",
+      "numberSell": 100,
+      "dateInput": "2020-1-20",
+      "view": 2200
+    },
+    {
+      "id": 4,
+
+      "name": "Áo thun Dinosaur 3",
+      "oldPrice": 194,
+      "newPrice": 145,
+      "image": "product-03 (1).jpg",
+      "numberSell": 20,
+      "dateInput": "2020-11-10",
+      "view": 2003
+    },
+    {
+      "id": 5,
+
+      "name": "Áo thun Dinosaur 4",
+      "oldPrice": 194,
+      "newPrice": 23,
+      "image": "product-04 (1).jpg",
+      "numberSell": 220,
+      "dateInput": "2020-11-10",
+      "view": 2003
+    },
+    {
+      "id": 6,
+
+      "name": "Áo thun Polo 05",
+      "oldPrice": 194,
+      "newPrice": 1202,
+      "image": "product-05 (1).jpg",
+      "numberSell": 203,
+      "dateInput": "2020-11-20",
+      "view": 204
+    },
+    {
+      "id": 7,
+
+      "name": "Áo thun Polo 06",
+      "oldPrice": 194,
+      "newPrice": 10,
+      "image": "product-06 (1).jpg",
+      "numberSell": 604,
+      "dateInput": "2021-11-20",
+      "view": 1000
+    },
+    {
+      "id": 8,
+
+      "name": "Áo somi caro 07",
+      "oldPrice": 194,
+      "newPrice": 166,
+      "image": "product-07 (1).jpg",
+      "numberSell": 190,
+      "dateInput": "2020-1-20",
+      "view": 2200
+    },
+    {
+      "id": 9,
+
+      "name": "Áo somi dài tay 08",
+      "oldPrice": 194,
+      "newPrice": 147,
+      "image": "product-08 (1).jpg",
+      "numberSell": 208,
+      "dateInput": "2020-11-10",
+      "view": 209
+    },
+    {
+      "id": 10,
+
+      "name": "Áo somi dài tay 09",
+      "oldPrice": 194,
+      "newPrice": 1456,
+      "image": "product-09 (1).jpg",
+      "numberSell": 205,
+      "dateInput": "2020-11-10",
+      "view": 2056
+    },
+    {
+      "id": 11,
+
+      "name": "Quần jean phong cách 10",
+      "oldPrice": 194,
+      "newPrice": 1250,
+      "image": "product-10 (1).jpg",
+      "numberSell": 2030,
+      "dateInput": "2020-11-20",
+      "view": 20044
+    },
+    {
+      "id": 12,
+
+      "name": "Quần jean 11",
+      "oldPrice": 194,
+      "newPrice": 1004,
+      "image": "product-11 (1).jpg",
+      "numberSell": 60,
+      "dateInput": "2021-11-20",
+      "view": 1004
+    },
+    {
+      "id": 13,
+
+      "name": "Quần jean 12",
+      "oldPrice": 194,
+      "newPrice": 1606,
+      "image": "product-12.jpg",
+      "numberSell": 1030,
+      "dateInput": "2020-1-20",
+      "view": 2200
+    }
+  ]
+}
