@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 import { AppContext } from "../../../contextAPI/AppProvider";
 import "../asset/css/selectProduct.scss";
 import product2 from "../asset/images/product/product-02 (1).jpg";
 
 export default function SelectProduct() {
   const [amount, setAmount] = useState(1);
+  const history = useHistory();
   const { idProduct } = useParams();
   const { allProduct } = useContext(AppContext);
   const product = allProduct.find((product) => product.id === Number(idProduct));
@@ -34,7 +35,14 @@ export default function SelectProduct() {
           alt=''
           className='app__main__select-product-left-img'
         />
-        <img src={product2} alt='' className='app__main__select-product-left-img' />
+        <img
+          src={product2}
+          alt=''
+          className='app__main__select-product-left-img'
+          onClick={() => {
+            history.push("/detail-product/3");
+          }}
+        />
       </div>
       <div className='app__main__select-product-center'>
         <img
@@ -52,18 +60,61 @@ export default function SelectProduct() {
           <div className='app__main__select-product-right__content-select'>
             <p className='app__main__select-product-right__content-select-title'>Màu sắc</p>
             <div className='app__main__select-product-right__content-select-color'>
-              <p className='app__main__select-product-right__content-select-color-white'></p>
-              <p className='app__main__select-product-right__content-select-color-red'></p>
-              <p className='app__main__select-product-right__content-select-color-yellow'></p>
+              <p
+                className='app__main__select-product-right__content-select-color-white'
+                onClick={() => {
+                  history.push("/detail-product/9");
+                }}
+              ></p>
+              <p
+                className='app__main__select-product-right__content-select-color-red'
+                onClick={() => {
+                  history.push("/detail-product/2");
+                }}
+              ></p>
+              <p
+                className='app__main__select-product-right__content-select-color-yellow'
+                onClick={() => {
+                  history.push("/detail-product/5");
+                }}
+              ></p>
             </div>
           </div>
           <div className='app__main__select-product-right__content-select'>
             <p className='app__main__select-product-right__content-select-title'>Kích cỡ</p>
             <div className='app__main__select-product-right__content-select-size'>
-              <p className='app__main__select-product-right__content-select-size-S'>S</p>
-              <p className='app__main__select-product-right__content-select-size-M'>M</p>
-              <p className='app__main__select-product-right__content-select-size-L'>L</p>
-              <p className='app__main__select-product-right__content-select-size-XL'>XL</p>
+              <p
+                className='app__main__select-product-right__content-select-size-S'
+                onClick={() => {
+                  history.push("/detail-product/1");
+                }}
+              >
+                S
+              </p>
+              <p
+                className='app__main__select-product-right__content-select-size-M'
+                onClick={() => {
+                  history.push("/detail-product/4");
+                }}
+              >
+                M
+              </p>
+              <p
+                className='app__main__select-product-right__content-select-size-L'
+                onClick={() => {
+                  history.push("/detail-product/9");
+                }}
+              >
+                L
+              </p>
+              <p
+                className='app__main__select-product-right__content-select-size-XL'
+                onClick={() => {
+                  history.push("/detail-product/7");
+                }}
+              >
+                XL
+              </p>
             </div>
           </div>
           <div className='app__main__select-product-right__content-select'>

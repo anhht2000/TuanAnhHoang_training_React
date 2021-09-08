@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import { toast } from "react-toastify";
 import product from "../data.json";
 
 export const AppContext = createContext();
@@ -21,6 +22,7 @@ export default function AppProvider({ children }) {
     .slice(0, 12);
   console.log(popularProduct);
   const handleAddCart = (value) => {
+    toast.success("🦄 Add to cart successfully!");
     setCart(cart + value);
   };
   return (

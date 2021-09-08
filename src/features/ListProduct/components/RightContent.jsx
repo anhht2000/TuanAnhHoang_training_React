@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
+import { useHistory } from "react-router";
 import { AppContext } from "../../../contextAPI/AppProvider";
 
 export default function RightContent() {
+  const history = useHistory();
   const { allProduct } = useContext(AppContext);
   var formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -31,9 +33,14 @@ export default function RightContent() {
                     {formatter.format(product.oldPrice)}
                   </p>
                 </div>
-                <a href='/' className='product__list__item-info-button'>
+                <span
+                  className='product__list__item-info-button'
+                  onClick={() => {
+                    history.push("/detail-product/" + product.id);
+                  }}
+                >
                   Chọn Mua
-                </a>
+                </span>
               </div>
             </li>
           );

@@ -20,15 +20,28 @@
     font-weight: 500;
     padding-bottom: 10px;
   }
-  &-text {
-    text-align: justify;
-    font-size: 15px;
-    font-weight: 400;
-    padding: 10px 0;
+  #text {
+    &.d-show {
+      height: auto;
+      margin: 0;
+    }
+    height: 185px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    .app__main-content-text {
+      text-align: justify;
+      font-size: 15px;
+      font-weight: 400;
+      padding: 10px 0;
+    }
   }
   div {
     text-align: center;
+
     .app__main-content-button {
+      &.d-none {
+        display: none;
+      }
       text-decoration: none;
       background: #42659d;
       padding: 8px 12px;
@@ -38,6 +51,7 @@
       display: inline-block;
       &:hover {
         opacity: 0.6;
+        cursor: pointer;
       }
     }
   }
