@@ -9,7 +9,7 @@ import slide2 from "../asset/images/slider/slide_2.png";
 
 export default function SliderContainer() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,

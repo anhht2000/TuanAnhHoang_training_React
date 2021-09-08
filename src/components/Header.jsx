@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AppContext } from "../contextAPI/AppProvider";
 import "./asset/css/header.scss";
@@ -6,6 +6,7 @@ import logo from "./asset/images/Logo-2.png";
 
 export default function Header() {
   const { cart } = useContext(AppContext);
+  const [isShow, setIsShow] = useState(false);
   return (
     <header className='app__header'>
       <ul className='app__header-left'>
@@ -41,27 +42,32 @@ export default function Header() {
         </li>
       </ul>
       <div className='app__header-subleft'>
-        <i className='fas fa-bars app__header-subleft-icon'></i>
-        <ul className='app__header-subleftList d-none'>
+        <i
+          className='fas fa-bars app__header-subleft-icon'
+          onClick={() => {
+            setIsShow(!isShow);
+          }}
+        ></i>
+        <ul className={isShow ? "app__header-subleftList" : "app__header-subleftList d-none"}>
           <li className='app__header-subleftList__item'>
-            <a href='/' className='app__header-subleftList__item-link'>
+            <NavLink to='/' className='app__header-subleftList__item-link'>
               Trang chủ
-            </a>
+            </NavLink>
           </li>
           <li className='app__header-subleftList__item'>
-            <a href='/' className='app__header-subleftList__item-link'>
+            <NavLink to='/list-product' className='app__header-subleftList__item-link'>
               Sản phẩm
-            </a>
+            </NavLink>
           </li>
           <li className='app__header-subleftList__item'>
-            <a href='/' className='app__header-subleftList__item-link'>
+            <NavLink to='/sud' className='app__header-subleftList__item-link'>
               Phụ kiện
-            </a>
+            </NavLink>
           </li>
           <li className='app__header-subleftList__item'>
-            <a href='/' className='app__header-subleftList__item-link'>
+            <NavLink to='s/ud' className='app__header-subleftList__item-link'>
               Liên hệ
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
