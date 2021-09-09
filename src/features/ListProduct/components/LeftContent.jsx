@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { AppContext } from "../../../contextAPI/AppProvider";
 
-export default function LeftContent() {
+export default function LeftContent({ isShow, handle }) {
   const { handleFilter, handleSetProduct } = useContext(AppContext);
   const [filter, setFilter] = useState({});
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function LeftContent() {
     });
   };
   return (
-    <div className='app__main__left'>
+    <div className={isShow ? "app__main__left" : "app__main__left isShow"}>
       <ul className='app__main__left-list'>
         <h3 className='app__main__left-list__title'>Danh mục sản phẩm</h3>
         <li className='app__main__left-list__item'>

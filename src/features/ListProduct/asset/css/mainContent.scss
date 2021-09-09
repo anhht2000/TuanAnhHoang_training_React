@@ -1,25 +1,62 @@
 @import "./variable";
 @import "./mixin.scss";
 .app__main {
-  // border: 1px solid green;
+  &-icon {
+    display: none;
+  }
   display: flex;
   padding: 45px 0;
   flex-wrap: wrap;
   @include Responsive(SM) {
     padding: 0 19px;
     padding-top: 45px;
+    &-icon {
+      display: block;
+      width: 100%;
+      padding: 0 0 25px 30px;
+      i {
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
   }
   &__left {
     width: 25%;
+    &.d-none {
+      display: none;
+    }
     @include Responsive(SM) {
+      position: fixed;
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      padding: 0 35px;
+      box-sizing: border-box;
+      background-color: white;
+      padding: 23px 20px;
+      box-shadow: 6px 13px 28px 0 black;
+      top: 32%;
+      left: 0;
+      transform: translateY(-50%);
+      right: 0;
+      justify-content: center;
+      transition: all linear 0.9s;
+      // &::before {
+      //   content: "";
+      //   width: 105vh;
+      //   height: 100vh;
+      //   top: -82%;
+      //   left: 0;
+      //   position: absolute;
+      //   opacity: 0.5;
+      //   z-index: -1;
+      // }
+      &.isShow {
+        transform: translateX(-140%);
+      }
     }
-    // @include Responsive(XS) {
-    //   display: none;
-    // }
     &-link {
       text-decoration: none;
       background-color: #42659d;
@@ -40,14 +77,14 @@
       @include Responsive(SM) {
         text-align: start;
         padding-top: 0;
-        width: 50%;
+        width: 33%;
       }
       &:nth-of-type(2),
       &:nth-of-type(3) {
         padding-top: 15px;
         @include Responsive(SM) {
           padding-top: 0;
-          width: 50%;
+          width: 33%;
         }
       }
       &__title {
