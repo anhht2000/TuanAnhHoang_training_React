@@ -35,6 +35,7 @@ function Product({ title, children, data }) {
                     </p>
                     <p className='product__list__item-info-price-old'>
                       {formatter.format(product.oldPrice)}
+                      {/* test  */}
                     </p>
                   </div>
                   <span
